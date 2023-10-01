@@ -13,20 +13,18 @@ function createListElement() {
   input.value = "";
 }
 
-button.addEventListener("click", function () {
+function addListAfterClick() {
   if (inputlength() > 0) {
-    var li = document.createElement("li");
-    li.appendChild(document.createTextNode(input.value));
-    ul.appendChild(li);
-    input.value = "";
+    createListElement();
   }
-});
+}
 
-input.addEventListener("keydown", function (event) {
+function addListAfterKeyPress(event) {
   if (inputlength() > 0 && event.key === "Enter") {
-    var li = document.createElement("li");
-    li.appendChild(document.createTextNode(input.value));
-    ul.appendChild(li);
-    input.value = "";
+    createListElement();
   }
-});
+}
+
+button.addEventListener("click", addListAfterClick);
+
+button.addEventListener("keydown", addListAfterKeyPress);
