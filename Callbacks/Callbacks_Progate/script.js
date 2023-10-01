@@ -3,5 +3,5 @@ const call = (callback) => {
 };
 
 call((name, age) => {
-  console.log(`${name} is ${age} years old.`);
+  console.log(`${name} is ${age} years`);
 });
