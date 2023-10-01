@@ -2,13 +2,13 @@ const printKen = () => {
   console.log("Ken the Ninja");
 };
 
-const printMaster = () => {
-  console.log("Master wooly");
-};
-
+//callback is a parameter becaues it does not have()
 const call = (callback) => {
   console.log("Calling the callback funciton");
+  //callback() is a funciton because it has ()
   callback();
 };
 
-call(printMaster);
+call(printKen);
+
+//JavaScript Study VII
