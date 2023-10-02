@@ -1,4 +1,5 @@
 // Normal functions
+//<STEP1>
 const introduceNormal = (name) => {
   console.log(name);
 };
