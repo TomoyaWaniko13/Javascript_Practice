@@ -16,6 +16,13 @@ newFunc();
 //Curring
 const multiply = (a, b) => (a = b);
 //a funciton in a function
+//converting a function that takes mutiple arguments
+//into a function that takes them one at a time.
 const curriedMultiply = (c) => (d) => c * d;
 let e = curriedMultiply(3)(4);
 console.log(`The value is ${e}`);
+
+//Compose
+const compose = (f, g) => (a) => f(g(a));
+const sum = (num) => num + 1;
+console.log(compose(sum, sum)(5));
