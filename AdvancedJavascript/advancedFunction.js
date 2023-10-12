@@ -26,3 +26,10 @@ console.log(`The value is ${e}`);
 const compose = (f, g) => (a) => f(g(a));
 const sum = (num) => num + 1;
 console.log(compose(sum, sum)(5));
+
+//Avoiding Side Effects, funcitonal purity.
+var a = 1;
+function b() {
+  // Side Effect.
+  a = 2;
+}
