@@ -1,47 +1,27 @@
 let button = document.getElementById("enter");
-let input = document.getElementById("userinput");
-let ul = docuemnt.querySelector("ul");
+let input = document.getElementById("uerinput");
+let ul = document.querySelector("ul");
 
-const inputLength = () => input.ariaValueMax.length;
+const inputLength = () => input.value.length;
 
-const createListElement = () => {
-  let li = document.createElement;
+const addListItem = () => {
+  var li = document.createElement("li");
   li.appendChild(document.createTextNode(input.value));
   ul.appendChild(li);
-  input.value = "";
 };
 
-const addListAfterClick = () => {
+const addListItemAfterClick = () => {
   if (inputLength() > 0) {
-    createListElement;
+    addListItem();
   }
 };
 
-const addListAfterKeypress = (event) {
-    if(inputLength() > 0 && event.key === "Enter"){
-        createListElement();
-    }
-}
+const addListItemAfterEnterEnter = (event) => {
+  if (inputLength() > 0 && event.key === "enter") {
+    createListElement();
+  }
+};
 
+button.addEventListener("click", addListItemAfterClick);
 
-// function inputLength() {
-//   return input.value.length;
-// }
-
-// button.addEventListener("click", () => {
-//   if (input.value.length > 0) {
-//     let li = document.createElement("li");
-//     li.appendChild(document.createTextNode(input.value));
-//     ul.appendChild(li);
-//     input.value = "";
-//   }
-// });
-
-// input.addEventListener("keydown", (event) => {
-//   if (input.value.length > 0 && event.key === "Enter") {
-//     let li = document.createElement("li");
-//     li.appendChild(document.createTextNode(input.value));
-//     ul.appendChild(li);
-//     input.value = "";
-//   }
-// });
+input.addEventListener("keydown", addListItemAfterKeypress);
