@@ -1,27 +1,28 @@
 let button = document.getElementById("enter");
-let input = document.getElementById("uerinput");
+let input = document.getElementById("userinput");
 let ul = document.querySelector("ul");
 
-const inputLength = () => input.value.length;
+const inputIsGreaterThanZero = () => input.value.length > 0;
 
 const addListItem = () => {
-  var li = document.createElement("li");
+  let li = document.createElement("li");
   li.appendChild(document.createTextNode(input.value));
   ul.appendChild(li);
+  input.value = "";
 };
 
-const addListItemAfterClick = () => {
-  if (inputLength() > 0) {
+const addListItemAfterClick = (event) => {
+  if (inputIsGreaterThanZero) {
     addListItem();
   }
 };
 
-const addListItemAfterEnterEnter = (event) => {
-  if (inputLength() > 0 && event.key === "enter") {
-    createListElement();
+const addListItemAfterKeyPress = (event) => {
+  if (inputIsGreaterThanZero && event.key === "Enter") {
+    addListItem();
   }
 };
 
 button.addEventListener("click", addListItemAfterClick);
 
-input.addEventListener("keydown", addListItemAfterKeypress);
+input.addEventListener("keydown", addListItemAfterKeyPress);
