@@ -72,3 +72,7 @@ const greetingBest = `Hello ${nameX} you seem to be ${
 }. What a lovely ${pet} you have.`;
 
 console.log(greetingBest);
+
+function greet(name=``, age=`30`, pet=`cat`){
+  
+}
