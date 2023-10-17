@@ -1,25 +1,23 @@
-var array = [1, 2, 3, 4, 16];
+var array = [1, 2, 10, 16];
+
+console.log("original", array);
 
 const double = [];
-const newArray = array.forEach((num) => double.push(num * 2););
 
-console.log(newArray);
+const newArray = array.forEach((num) => {
+  double.push(num * 2);
+});
 
-//map, filter, reduce
+console.log("forEach", double);
 
-const mapArray = array.map(num =>  num * 2);
+const mapArray = array.map((num) => num * 2);
 
 console.log("map", mapArray);
 
-const filterArray = array.filter(num => num === 5);
+const filterArray = array.filter((num) => num > 3);
 
-console.log('filter',filterArray);
+console.log("filter", filterArray);
 
-//reduce
-// () is parameters {} is how to handle these parameters
-const reduceArray = array.reduce((accumulator,num) =>{
-  return accumulator + num;
-},5);
+const reduceArray = array.reduce((accumulator, num) => accumulator + num);
 
-console.log('reduce',reduceArray);
-
+console.log("reduce", reduceArray);
