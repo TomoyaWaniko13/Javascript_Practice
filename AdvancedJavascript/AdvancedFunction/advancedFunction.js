@@ -19,3 +19,17 @@ const first = () => {
 
 const newFunc = first();
 newFunc();
+
+const multiply = (a, b) => a * b;
+//=> is a function
+const curriedMultiply = (a) => (b) => a * b;
+curriedMultiply(3)(4);
+
+const compose = (f, g) => (a) => f(g(a));
+const sum = (num) => num + 1;
+compose(sum, sum)(5);
+
+var a = 1;
+function b() {
+  a = 2;
+}
