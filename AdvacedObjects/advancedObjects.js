@@ -37,5 +37,6 @@ class Wizard extends Player {
   }
 }
 
+//new means "make an instance of Wizard"
 const wizard1 = new Wizard("Shelly", "Healer");
 const wizard2 = new Wizard("Shawn", "Dark Magic");
