@@ -1,3 +1,5 @@
+import chalk from "chalk";
+
 import Animal from "./animal.js";
 
 class Dog extends Animal {
@@ -12,11 +14,12 @@ class Dog extends Animal {
   }
 
   info() {
-    this.greet();
-    console.log(`My name is ${this.name}`);
-
-    console.log(`I'm a ${this.breed}`);
     const humanAge = this.getHumanAge();
+    this.greet();
+    console.log(chalk.yellow(`My name is ${this.name}`));
+    console.log(chalk.bgCyan(`I am ${this.breed}`));
+
+    console.log(`I'm ${this.age} years old`);
     console.log(`I am ${humanAge} years old in human years`);
   }
 
