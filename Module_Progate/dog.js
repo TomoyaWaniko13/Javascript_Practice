@@ -1,3 +1,5 @@
+import Animal from "./animal.js";
+
 class Dog extends Animal {
   // constructor: This is a special
   // method used for creating and initializing
@@ -12,10 +14,15 @@ class Dog extends Animal {
   info() {
     this.greet();
     console.log(`My name is ${this.name}`);
-    console.log();
+
+    console.log(`I'm a ${this.breed}`);
+    const humanAge = this.getHumanAge();
+    console.log(`I am ${humanAge} years old in human years`);
   }
 
   getHumanAge() {
     return this.age * 7;
   }
 }
+
+export default Dog;
