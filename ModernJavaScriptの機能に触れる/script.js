@@ -27,3 +27,17 @@
 
 // //const cannot be redcleared
 // const val3 = "redclear const";
+
+const val4 = {
+  name: "Tomoya",
+  age: 50,
+};
+
+console.log(val4);
+val4.name = "Ayana";
+console.log(val4);
+
+const val5 = ["dog", "cat"];
+val5[0] = "bird";
+val4.push;
+console.log(val5);
