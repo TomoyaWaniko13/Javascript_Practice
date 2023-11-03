@@ -117,3 +117,13 @@
 // });
 
 // console.log(newNameArray);
+
+// const val1 = 1 < 0 ? "This is True" : "This is false";
+// const val2 = 1 > 0 ? "This is True" : "This is false";
+// console.log(val1);
+// console.log(val2);
+
+const num = 1300;
+
+const formattedNumber =
+  typeof num === "number" ? num.toLocaleString() : "Enter your number";
