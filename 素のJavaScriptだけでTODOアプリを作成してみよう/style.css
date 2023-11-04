@@ -1,0 +1,49 @@
+* {
+  font-family: sans-serif;
+}
+
+.TODO-list button {
+  background-color: #002584; /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.TODO-list button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.TODO-list input {
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+}
+
+.add-area {
+  background-color: rgb(163, 255, 255);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.unifinished-area,
+.finished-area {
+  background-color: rgb(163, 255, 255);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.title {
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
