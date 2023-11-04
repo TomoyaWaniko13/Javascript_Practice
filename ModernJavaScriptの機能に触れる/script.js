@@ -123,7 +123,96 @@
 // console.log(val1);
 // console.log(val2);
 
-const num = 1300;
+// const num = 1300;
 
-const formattedNumber =
-  typeof num === "number" ? num.toLocaleString() : "Enter your number";
+// const formattedNumber = console.log(num.toLocaleString());
+
+// const num2 = "1100";
+// const formattedNumber2 =
+//   typeof num === "number" ? num2.toLocaleString() : "Enter a number";
+
+// console.log(formattedNumber2);
+
+// const checkSum = (num1, num2) => {
+//   return num1 + num2 > 100 ? "Exceed 100" : "OK";
+// };
+
+// console.log(checkSum(50, 60));
+
+// const checkSum = (num1, num2) => {
+//   return num1 + num2 > 100 ? "Exceed" : "OK";
+// };
+
+// console.log(checkSum(50, 40));
+
+// const flag1 = true;
+// const flag2 = false;
+
+// if (flag1 || flag2) {
+//   console.log("Either 1 and 2 are true");
+// }
+
+// if (flag1 && flag2) {
+//   console.log("Both 1 and 2 are true");
+// }
+
+// const num2 = null;
+// // &&は左側がtrueなら右側を返す
+// const fee2 = num2 && "You have set something";
+// console.log(fee2);
+
+// var val1 = "var variable";
+// console.log(val1);
+
+// val1 = "rewrite var variable";
+// var val1 = "redeclear var variable";
+
+// let val2 = "let variables";
+// console.log(val2);
+
+// val2 = "let variable";
+
+// const val3 = "const variable";
+
+// const val4 = {
+//   name: "JavaScript_Neko_San",
+//   age: 28,
+// };
+
+// val4.name = "Python_Neko_San";
+// console.log(val4);
+
+// const val5 = ["JavaScript_Neko_San", "Docker_Neko_San"];
+// val5[0] = "Tired_Neko_San";
+// val5.push("Super_Neko_San");
+// console.log(val5);
+
+// const fun1 = function (str) {
+//   return str;
+// };
+
+// console.log(fun1("func1"));
+
+// const func3 = (nun1, num2) => num1 + num2;
+
+// console.log(func3(10, 20));
+
+// const myProfile = {
+//   name: "Neko-san",
+//   age: 100,
+// };
+
+// const { name, age } = myProfile;
+// console.log(`My name is ${name}, I am ${age} years old.`);
+
+// const hello = (name = "Neko") => console.log(`Hello, ${name} san!`);
+// hello();
+// hello("JavaScript-Neko");
+
+const array1 = [1, 2];
+const sumFunc = (num1, num2) => console.log(num1 + num2);
+sumFunc(array1[0], array1[1]);
+sumFunc(...array1);
+
+const array2 = [1, 2, 3, 4, 5];
+const [num1, num2, ...array3] = array3;
