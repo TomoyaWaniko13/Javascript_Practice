@@ -3,9 +3,8 @@
 }
 
 .TODO-list button {
-  background-color: #002584; /* Green */
   border: none;
-  color: white;
+  color: black;
   padding: 10px;
   margin: 0px 5px;
   text-align: center;
@@ -40,7 +39,7 @@
 
 .add-area button {
   justify-content: center;
-  margin: 10px auto;
+  margin: 10px;
 }
 
 #incomplete-list,
