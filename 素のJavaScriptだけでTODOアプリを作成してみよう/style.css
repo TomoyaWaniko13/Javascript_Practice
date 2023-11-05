@@ -59,10 +59,11 @@
   margin-top: -5px;
 }
 
-ul.list-row {
+.list-row {
   display: flex;
   justify-content: center; /* This centers the li and button elements inside the ul horizontally */
   padding: 0; /* Removes the default padding */
+  margin: 10px;
   list-style: none; /* Removes the default list item indicators */
   width: 100%;
 }
