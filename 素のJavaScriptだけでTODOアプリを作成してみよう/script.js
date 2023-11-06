@@ -33,6 +33,9 @@ const onClickAdd = () => {
 
     const undoButton = document.createElement("button");
     undoButton.innerText = "undo";
+    undoButton.addEventListener("click", () => {
+      alert("undoButton is working.");
+    });
 
     addTarget.appendChild(li);
     addTarget.appendChild(undoButton);
