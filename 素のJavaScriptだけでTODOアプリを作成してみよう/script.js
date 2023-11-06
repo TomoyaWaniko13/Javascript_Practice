@@ -23,17 +23,33 @@ const onClickAdd = () => {
 
   completeButton.innerText = "done";
   completeButton.addEventListener("click", () => {
-    console.log("Done button is working");
-    document.getElementById("complete-list").removeChild();
+    deleteFromIncompleteList(deleteButton.parentNode);
+    const addTarget = completeButton.parentNode;
+    const text = addTarget.firstElementChild.innerText;
+
+    addTarget.textContent = null;
+    const li = document.createElement("li");
+    li.innerText = text;
+
+    const undoButton = document.createElement("button");
+    undoButton.innerText = "undo";
+
+    addTarget.appendChild(li);
+    addTarget.appendChild(undoButton);
+
+    document.getElementById("complete-list").appendChild(addTarget);
   });
 
   deleteButton.addEventListener("click", () => {
-    const deleteTarget = deleteButton.parentNode;
-    console.log(deleteTarget);
-    document.getElementById("incomplete-list").removeChild(deleteTarget);
+    deleteFromIncompleteList(deleteButton.parentNode);
   });
 };
 
 document.getElementById("add-button").addEventListener("click", () => {
   onClickAdd();
 });
+
+const deleteFromIncompleteList = (delteTarget) => {
+  document.getElementById("incomplete-list").removeChild(delteTarget);
+  console.log("delteFromIncompleteList() function has run!");
+};
