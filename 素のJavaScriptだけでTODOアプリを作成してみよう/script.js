@@ -20,21 +20,19 @@ const onClickAdd = () => {
     doneButton.addEventListener("click", () => {
       deleteFromIncompleteList(doneButton.parentNode);
 
-      //thigns we need to add to the <div id="complete-list">
       const addTarget = doneButton.parentNode;
       const doneText = addTarget.firstElementChild.innerText;
-      console.log(`doneText: ${doneText}`);
 
-      //reset addTarget (div)
+      //reset the div addTarget.
       addTarget.textContent = null;
-      console.log(addTarget);
+      const done_li = document.createElement("li");
+      done_li.innerText = doneText;
 
-      const li = document.createElement("li");
-      li.innerText = doneText;
-
-     //create a undoButton
       const undoButton = document.createElement("button");
-      backButton.innerText = 
+      undoButton.innerText = "undo";
+
+      addTarget.appendChild(done_li);
+      addTarget.appendChild(undoButton);
     });
 
     const deleteButton = document.createElement("button");
