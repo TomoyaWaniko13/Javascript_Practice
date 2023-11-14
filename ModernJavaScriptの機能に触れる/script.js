@@ -209,10 +209,15 @@
 // hello();
 // hello("JavaScript-Neko");
 
-const array1 = [1, 2];
-const sumFunc = (num1, num2) => console.log(num1 + num2);
-sumFunc(array1[0], array1[1]);
-sumFunc(...array1);
+// const array1 = [1, 2];
+// const sumFunc = (num1, num2) => console.log(num1 + num2);
+// sumFunc(array1[0], array1[1]);
+// sumFunc(...array1);
 
-const array2 = [1, 2, 3, 4, 5];
-const [num1, num2, ...array3] = array3;
+// const array2 = [1, 2, 3, 4, 5];
+// const [num1, num2, ...array3] = array3;
+
+const nameArray = ["Tired_Neko_San", "Fish_Neko_San", "Yandere_Neko_San"];
+nameArray.map((name, index) => console.log(index));
+
+const numArray = [1, 2, 3, 4, 5];
