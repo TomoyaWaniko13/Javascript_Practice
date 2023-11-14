@@ -1,0 +1,51 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-weight: 300;
+}
+
+button {
+  border-radius: 10px;
+  border-style: none;
+  padding: 6px;
+  margin-left: 5px;
+  margin-top: -3px;
+}
+
+button:hover {
+  background-color: #ddd; /* Change as needed */
+}
+
+button:active {
+  background-color: #bbb; /* Change as needed */
+}
+
+ul {
+  display: flex;
+}
+
+#input-area {
+  background-color: rgb(193, 242, 242);
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+#unfinished-area {
+  background-color: rgb(213, 255, 219);
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+#finished-area {
+  background-color: rgb(201, 201, 255);
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+#input-area input {
+  border-radius: 10px;
+  border-style: none;
+  padding: 5px;
+}
