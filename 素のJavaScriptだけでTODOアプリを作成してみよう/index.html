@@ -13,9 +13,10 @@
   <body>
     <div>
       <div id="input-area">
-        <input type="text" placeholder="Add your task" />
-        <button>Add</button>
+        <input id="input-text" , type="text" placeholder="Add your task" />
+        <button id="add-button">Add</button>
       </div>
+
       <div id="unfinished-area">
         <h1>Unfinished tasks</h1>
         <ul>
@@ -35,10 +36,14 @@
           </li>
         </ul>
       </div>
+
       <div id="finished-area">
         <h1>Finished tasks</h1>
         <ul>
-          <li>Neko-san</li>
+          <li class="list-row">
+            <p>Neko-san</p>
+            <button>undo</button>
+          </li>
         </ul>
       </div>
     </div>
