@@ -4,14 +4,16 @@ body {
 
 h1 {
   font-weight: 300;
+  text-align: center;
 }
 
 button {
   border-radius: 10px;
   border-style: none;
-  padding: 6px;
+  padding: 4px;
   margin-left: 5px;
   margin-top: -3px;
+  font-size: 12px;
 }
 
 button:hover {
@@ -20,10 +22,6 @@ button:hover {
 
 button:active {
   background-color: #bbb; /* Change as needed */
-}
-
-ul {
-  display: flex;
 }
 
 #input-area {
@@ -48,4 +46,13 @@ ul {
   border-radius: 10px;
   border-style: none;
   padding: 5px;
+}
+
+.list-row {
+  display: flex;
+}
+
+.list-row button {
+  height: 30px; /* You can set a specific height for the buttons */
+  margin-top: 10px;
 }
