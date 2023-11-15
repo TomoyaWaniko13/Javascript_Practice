@@ -5,15 +5,18 @@ const onClickAdd = () => {
     document.getElementById("input-text").value = "";
 
     const div = document.createElement("div");
-    console.log(div);
     div.className = "list-row";
 
     const li = document.createElement("li");
-    console.log(li);
 
     const p = document.createElement("p");
     p.innerText = inputText;
-    console.log(p);
+
+    li.appendChild(div);
+    div.appendChild(p);
+
+    console.log(li);
+    document.getElementById("unfinished-area-ul").appendChild(li);
   }
 };
 
