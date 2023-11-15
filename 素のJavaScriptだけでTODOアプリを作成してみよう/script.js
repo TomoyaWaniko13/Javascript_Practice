@@ -13,8 +13,22 @@ const onClickAdd = () => {
     const p = document.createElement("p");
     p.innerText = inputText;
 
+    const doneButton = document.createElement("button");
+    doneButton.innerText = "Done";
+    doneButton.addEventListener("click", () => {
+      alert("This button is working!");
+    });
+
+    const deleteButton = document.createElement("button");
+    deleteButton.innerText = "Delete";
+    deleteButton.addEventListener("click", () => {
+      alert("This button is working!");
+    });
+
     li.appendChild(div);
     div.appendChild(p);
+    div.appendChild(doneButton);
+    div.appendChild(deleteButton);
     document.getElementById("unfinished-area-ul").appendChild(li);
   }
 };
@@ -22,29 +36,3 @@ const onClickAdd = () => {
 document.getElementById("add-button").addEventListener("click", () => {
   onClickAdd();
 });
-
-// const onClickAdd = () => {
-//   const inputText = document.getElementById("input-text").value.trim();
-
-//   if (inputText) {
-//     document.getElementById("input-text").value = "";
-
-//     const div = document.createElement("div");
-//     div.className = "list-row";
-
-//     const li = document.createElement("li");
-
-//     const p = document.createElement("p");
-//     p.innerText = inputText;
-
-//     li.appendChild(div);
-//     div.appendChild(p);
-
-//     console.log(li);
-//     document.getElementById("unfinished-area-ul").appendChild(li);
-//   }
-// };
-
-// document
-//   .getElementById("add-button")
-//   .addEventListener("click", () => onClickAdd());

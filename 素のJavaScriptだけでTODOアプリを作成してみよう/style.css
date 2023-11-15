@@ -28,18 +28,21 @@ button:active {
   background-color: rgb(193, 242, 242);
   padding: 5px;
   margin-bottom: 5px;
+  width: 800px;
 }
 
 #unfinished-area {
-  background-color: rgb(213, 255, 219);
+  border: 2px solid #bbb;
   padding: 5px;
   margin-bottom: 5px;
+  width: 800px;
 }
 
 #finished-area {
   background-color: rgb(218, 218, 251);
   padding: 5px;
   margin-bottom: 5px;
+  width: 800px;
 }
 
 #input-area input {
