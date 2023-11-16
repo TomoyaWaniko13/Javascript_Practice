@@ -25,7 +25,6 @@ const onClickAdd = () => {
       const moveTarget = doneButton.closest("li");
       doneButton.nextElementSibling.remove();
       doneButton.remove();
-
       const undoButton = document.createElement("button");
       undoButton.innerText = "undo";
       moveTarget.firstElementChild.appendChild(undoButton);
