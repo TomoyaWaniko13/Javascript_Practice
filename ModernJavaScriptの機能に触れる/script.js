@@ -217,7 +217,49 @@
 // const array2 = [1, 2, 3, 4, 5];
 // const [num1, num2, ...array3] = array3;
 
-const nameArray = ["Tired_Neko_San", "Fish_Neko_San", "Yandere_Neko_San"];
-nameArray.map((name, index) => console.log(index));
+// const nameArray = ["Tired_Neko_San", "Fish_Neko_San", "Yandere_Neko_San"];
+// nameArray.map((name, index) => console.log(index));
 
-const numArray = [1, 2, 3, 4, 5];
+// const numArray = [1, 2, 3, 4, 5];
+
+// const profile = {
+//   name: "Neko-san",
+//   age: 50,
+// };
+
+// const message1 = `My name is ${profile.name}, I am ${profile.age} years old.`;
+// console.log(message1);
+
+// const { name, age } = profile;
+// const message2 = `My name is ${name}, I am ${age} years old.`;
+// console.log(message2);
+
+// const profile2 = ["KeroKero-Neko-san", 30];
+// const message3 = `My name is ${profile2[0]}. I am ${profile2[1]} years old.`;
+// console.log(message3);
+
+// const [name2, age2] = profile2;
+
+// const myProfile = {
+//   age: 31,
+//   name: "Neko-san",
+// };
+
+// const { age, name = "Tomoya" } = myProfile;
+// console.log(age);
+// console.log(name);
+
+// const name = "Tomoya";
+// const age = 31;
+
+// const myProfile = {
+//   name,
+//   age,
+// };
+// console.log(myProfile);
+
+const arr1 = [1, 2, 3, 4];
+console.log(arr1);
+console.log(...arr1);
+
+const sumFunc = (num1, num2) => console.log(num1 + num2);
