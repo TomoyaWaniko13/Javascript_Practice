@@ -258,8 +258,24 @@
 // };
 // console.log(myProfile);
 
-const arr1 = [1, 2, 3, 4];
-console.log(arr1);
-console.log(...arr1);
+// const arr1 = [1, 2];
 
-const sumFunc = (num1, num2) => console.log(num1 + num2);
+// const SumFunc = (i1, i2) => console.log(i1 + i2);
+// SumFunc(...arr1);
+
+// const sayHello = (name = "Neko-san") => console.log(sayHello);
+
+// const myProfile = {
+//   age: 31,
+// };
+// const { age } = myProfile;
+
+// const array1 = [1, 2, 3, 4, 5];
+// console.log(array1);
+// console.log(...array1);
+// const [a, ...b] = array1;
+// console.log(b);
+// const [num1, num2, ...num3] = array1;
+// console.log(num3);
+
+// const array6 = [...array4];
