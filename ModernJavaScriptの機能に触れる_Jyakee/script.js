@@ -279,3 +279,20 @@
 // console.log(num3);
 
 // const array6 = [...array4];
+
+const array1 = [1, 2, 3, 4, 5];
+const array2 = array1;
+array2[0] = 100;
+console.log(array2);
+console.log(array1);
+
+const name = "neko";
+const age = 31;
+
+const neko = {
+  name,
+  age,
+};
+
+neko.name = "Super-Neko-san";
+console.log(neko);
