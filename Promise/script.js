@@ -212,18 +212,155 @@
 //     console.log("rejected...")
 // });
 
-const promise1 = new Promise((resolve, reject) => {
-    reject("passed val");
+// const promise1 = new Promise((resolve, reject) => {
+//     reject("passed val");
+// })
+//     .then((val) => {
+//         console.log(`then1 ${val} `);
+//         return val;
+//     })
+//     .catch((val) => {
+//         console.log(`catch ${val}`);
+//         return val;
+//     })
+//     .then((val) => {
+//         console.log(`then2 ${val}`);
+//         return val;
+//     });
+
+// const promise1 = new Promise((resolve, reject) => {
+//     reject("passed value");
+// })
+//     .then((val) => {
+//         console.log(`then: ${val}`);
+//         return val;
+//     })
+//     .catch((val) => {
+//         console.log(`catch: ${val}`);
+//         return val;
+//     })
+//     .then((val)=>{
+//         console.log(`then ${val}`);
+//     });
+//
+// const promise1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve();
+//     }, 1000);
+// })
+//     .then(() => {
+//         console.log("promise 1 has finished!");
+//     });
+//
+// const promise2 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve();
+//     }, 2000);
+// })
+//     .then(() => {
+//         console.log("promise 2 has finished!")
+//     });
+//
+// Promise.all([promise1, promise2]).then(() => {
+//     console.log(".all: All promises have finished!");
+// });
+//
+// Promise.race([promise1, promise2]).then(() => {
+//     console.log(".race: One of these promises have finished!")
+// });
+
+// const promise1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve();
+//     }, 2000);
+// })
+//     .then(() => {
+//         console.log("1 has finished");
+//     });
+//
+// const promise2 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve();
+//     }, 3000);
+// })
+//     .then(() => {
+//         console.log("2 has finished");
+//     });
+//
+// Promise.all(([promise1, promise2])).then(() => {
+//     console.log("1 and 2 have finished.")
+// });
+//
+//
+// const late = (ms) => {
+//     new Promise
+// }
+
+// const example = () => {
+//     console.log("example gets run");
+// }
+
+// const late = (ms) => {
+//     new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve();
+//         }, ms);
+//     }).then(() => {
+//         console.log(`Sorry, I kept you waiting for ${ms} ms.`)
+//     });
+// }
+//
+
+// const late = async (ms) => {
+//     await new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve();
+//         }, ms);
+//     })
+//     console.log("log log");
+// }
+
+// const asyncFunc = async () =>{
+//     let x, y;
+//
+//     x = new Promise(resolve =>{
+//         setTimeout(() => {
+//             resolve(1);
+//         }, 1000);
+//     })
+//
+//     y = new Promise
+// }
+
+// const promise = new Promise((resolve, reject) => {
+//     if (true) {
+//         resolve("Stuff worked");
+//     }
+//     reject("Error");
+// })
+//
+// promise
+//     .then(result => result + "!")
+//     .then(result2 => {
+//         throw Error;
+//         console.log(result2);
+//     })
+//     .catch(() => console.log("in .catch()"));
+
+const promise2 = new Promise((resolve, reject) =>{
+    setTimeout(resolve, 1000, "resolve after 1000ms");
 })
-    .then((val) => {
-        console.log(`then1 ${val} `);
-        return val;
-    })
-    .catch((val) => {
-        console.log(`catch ${val}`);
-        return val;
-    })
-    .then((val) => {
-        console.log(`then2 ${val}`);
-        return val;
-    });
+
+const promise3 = new Promise((resolve, reject) =>{
+    setTimeout(resolve, 2000, "resolve after 2000ms");
+})
+
+const promise4 = new Promise((resolve,reject)=>{
+    setTimeout(resolve,3000,"resolve after 3000ms")
+})
+
+Promise.all([promise2, promise3, promise4]).then(value => console.log(value));
+
+
+
+
