@@ -347,20 +347,38 @@
 //     })
 //     .catch(() => console.log("in .catch()"));
 
-const promise2 = new Promise((resolve, reject) =>{
-    setTimeout(resolve, 1000, "resolve after 1000ms");
+// const promise = new Promise((resolve, reject) => {
+//     if (true) {
+//         resolve("Stuff worked");
+//     }
+//     reject("Error");
+// })
+//
+// const promise2 = new Promise((resolve, reject) =>{
+//     setTimeout(resolve, 1000, "resolve after 1000ms");
+// })
+//
+// const promise3 = new Promise((resolve, reject) =>{
+//     setTimeout(resolve, 2000, "resolve after 2000ms");
+// })
+//
+// const promise4 = new Promise((resolve,reject)=>{
+//     setTimeout(resolve,3000,"resolve after 3000ms")
+// })
+//
+// Promise.all([promise2, promise3, promise4]).then(value => console.log(value));
+
+
+const urls = [
+    "https://jsonplaceholder.typicode.com/users",
+    "https://jsonplaceholder.typicode.com/posts",
+    "https://jsonplaceholder.typicode.com/albums"
+]
+
+Promise.all(urls.map(url => {
+    return fetch(url).then(resp => resp.json());
+})).then(results => {
+    console.log(results[0]);
+    console.log(results[1]);
+    console.log(results[2]);
 })
-
-const promise3 = new Promise((resolve, reject) =>{
-    setTimeout(resolve, 2000, "resolve after 2000ms");
-})
-
-const promise4 = new Promise((resolve,reject)=>{
-    setTimeout(resolve,3000,"resolve after 3000ms")
-})
-
-Promise.all([promise2, promise3, promise4]).then(value => console.log(value));
-
-
-
-
