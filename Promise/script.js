@@ -568,10 +568,161 @@
 //     "https://jsonplaceholder.typicode.com/"
 // ]
 
-async function resolveSample() {
-    return "resolve!!";
-}
+// async function resolveSample() {
+//     return "resolve!";
+// }
+//
+// resolveSample().then(value => console.log(value));
 
-resolveSample()
-    .then(value=>{
-        console.log(value);});
+// async function rejectSample() {
+//     throw new Error("Reject...");
+// }
+//
+// rejectSample().catch(err => {
+//     console.log(err);
+// })
+
+// function sampleResolve(value) {
+//     return new Promise(resolve => setTimeout(resolve, 1000, value * 2));
+// }
+//
+// async function sample() {
+//     const result = await sampleResolve(5);
+//     return result + 5;
+// }
+//
+// sample().then(result => {
+//     console.log(result);
+// });
+
+// async function resolveSample() {
+//     return "resolve!";
+// }
+//
+// resolveSample().then(result => console.log(result));
+//
+// async function rejectSample() {
+//     throw new Error("reject");
+// }
+//
+// rejectSample()
+//     .then(result => console.log(`Resolve: ${result}`))
+//     .catch(error => console.log(`Reject: ${error}`));
+
+// async function resolveSample() {
+//     return "Resolve!!";
+// }
+//
+// resolveSample().then(console.log);
+
+// function sampleResolve(value) {
+//     return new Promise(resolve => {
+//         setTimeout(resolve, 3000, value * 2);
+//     })
+// }
+//
+// async function sample() {
+//     const result = await sampleResolve(10);
+//     return result + 5;
+// }
+//
+// sample().then(result =>{
+//     console.log(result);
+// });
+
+//
+// function sample() {
+//     let result = 0;
+//
+//     return sampleResolve(10)
+//         .then((value) => {
+//             result += value + 10;
+//             return result;
+//         })
+// }
+//
+// sample().then(console.log);
+
+// function multiplyByTwo(value) {
+//     return new Promise(resolve => {
+//         setTimeout(resolve, 2000, value * 2);
+//     });
+// }
+
+// async function sample() {
+//     let value = 0;
+//
+//     for (let i = 0; i < 4; i++) {
+//         const result = await multiplyByTwo(10);
+//
+//     }
+// }
+//
+// sample();
+
+// function sampleResolve(value) {
+//     return new Promise(resolve => {
+//         setTimeout(resolve, 2000, value * 3);
+//     })
+// }
+//
+// function multiplyByTwo(value) {
+//     return new Promise(resolve => {
+//         setTimeout(resolve, 2000, value * 2);
+//     })
+// }
+//
+// function multiplyByThree(value) {
+//     return new Promise(resolve => {
+//         setTimeout(resolve, 3000, value * 3);
+//     })
+// }
+//
+// async function sample() {
+//     const [a, b]
+//         = await Promise.all([multiplyByTwo(2), multiplyByThree(3)]);
+//     const c = await multiplyByThree(b);
+// }
+
+
+// function sample() {
+//     const promiseA = multiplyByTwo(2);
+//     const promiseB = multiplyByThree(3);
+//     const promiseC = promiseB.then(value => {
+//         return multiplyByThree(value);
+//     });
+//
+//     return Promise.all([promiseA, promiseB, promiseC])
+//         .then(([a, b, c]) => {
+//             return [a, b, c];
+//         });
+// }
+//
+// sample().then(([a, b, c]) => {
+//     console.log(a, b, c);
+// });
+
+const urls = [
+    "https://jsonplaceholder.typicode.com/posts",
+    "https://jsonplaceholder.typicode.com/users"
+]
+
+const getData = async function () {
+    try {
+        const[users,posts]
+            = await Promise.all(urls.map(url));
+    } catch (err){
+        console.log(err);
+    }
+};
+
+//
+// Promise.all(urls.map(url => {
+//     return fetch(url).then(response => response.json());
+// })).then(array => {
+//     console.log("1", array[0]);
+//     console.log("2", array[1]);
+// })
+//     .finally(() => {
+//         console.log("\nfinally!!!")
+//     })
