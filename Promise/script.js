@@ -451,12 +451,127 @@
 //     .catch(() => console.log("error"));
 //
 
-const animals = {
-    tiger:23,
-    lion:5,
-    monkey:2
+// const animals = {
+//     tiger:23,
+//     lion:5,
+//     monkey:2
+// }
+//
+// const {tiger, ...rest} = animals;
+//
+// console.log(tiger)
+
+// async function fetchUsers() {
+//     const resp = await fetch("https://jsonplaceholder.typicode.com/users");
+//     const data = await resp.json();
+//     console.log(data);
+// }
+//
+
+// fetch("https://jsonplaceholder.typicode.com/users")
+//     .then(resp => resp.json())
+//     .then(console.log);
+
+
+// const getData = async function () {
+//     const [users, posts] =
+//         await Promise.all(urls.map(url => fetch(url).then(resp => resp.json())));
+//     console.log(users[0]);
+// };
+//
+// getData();
+
+// Promise.all(urls.map(url =>
+//     fetch(url).then(resp => resp.json())
+// )).then(array => {
+//     console.log(array[0]);
+//     console.log(array[1]);
+// })
+
+// const urls = [
+//     "https://jsonplaceholder.typicode.com/users",
+//     "https://jsonplaceholder.typicode.com/posts"
+// ]
+//
+// const getData = async function () {
+//     const [users, posts] = await Promise.all(urls.map(url => fetch(url).then(resp => resp.json())));
+//     console.log(users);
+// };
+//
+// getData();
+
+// const animals = {
+//     tiger: 23,
+//     lion: 5,
+//     monkey: 2,
+//     bird: 4
+// }
+//
+// function objectSpread(p1, p2, p3) {
+//     console.log(p1);
+//     console.log(p2);
+//     console.log(p3);
+// }
+//
+// const {tiger, lion, ...rest} = animals;
+//
+// objectSpread(tiger, lion, rest);
+
+
+// Promise.all(urls.map(url => {
+//     return fetch(url).then(people => people.json());
+// }))
+//     .then(array =>{
+//         console.log("1", array[0]);
+//         console.log("2", array[1]);
+//     })
+
+// Promise.all(urls.map(url => fetch(url).then(resp => resp.json())))
+//     .then(array => {
+//         console.log(array[0]);
+//     });
+
+// const urls = [
+//     "https://jsonplaceholder.typicode.com/users",
+//     "https://jsonplaceholder.typicode.com/posts"
+// ]
+//
+// Promise.all(urls.map(url => fetch(url).then(resp => resp.json())))
+//     .then(array => {
+//         console.log(array[0]);
+//         console.log(array[1]);
+//     });
+
+// const urls = [
+//     "https://jsonplaceholder.typicode.com/users",
+//     "https://jsonplaceholder.typicode.com/posts"
+// ]
+//
+// const getData2 = async function () {
+//     const arrayOfPromises = urls.map(url => fetch(url));
+//     for await (let request of arrayOfPromises) {
+//         const data = await request.json();
+//         console.log(data);
+//     }
+// };
+//
+// getData2();
+
+// const loopThroughUrls = url => {
+//     for (url of urls) {
+//         console.log(url);
+//     }
+// }
+
+// const urls = [
+//     "https://jsonplaceholder.typicode.com/users",
+//     "https://jsonplaceholder.typicode.com/"
+// ]
+
+async function resolveSample() {
+    return "resolve!!";
 }
 
-const {tiger, ...rest} = animals;
-
-console.log(tiger)
+resolveSample()
+    .then(value=>{
+        console.log(value);});
